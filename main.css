@@ -1,0 +1,1482 @@
+@font-face {
+  font-family: "Source Code Pro Regular";
+  src: url("./SourceCodePro-Regular.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Code Pro Medium";
+  src: url("./SourceCodePro-Medium.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+*,
+*:after {
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro Regular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  font-family: "Source Code Pro Medium";
+}
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo div {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 100px;
+}
+.bordered {
+  border: 3.5px solid transparent;
+
+  animation: 7s rotate linear infinite;
+  background: linear-gradient(#fff 0 0) padding-box,
+    conic-gradient(
+        from 90deg at 50% 50%,
+        #ff0037,
+        rgba(191, 100, 255, 1),
+        rgba(116, 99, 255, 1),
+        rgba(78, 255, 174, 1),
+        rgba(255, 201, 110, 1),
+        rgba(255, 0, 55, 1)
+      )
+      border-box;
+  border-radius: 10px;
+}
+@keyframes rotate {
+  0% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 0deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  1% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 3.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  2% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 7.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  3% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 10.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  4% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 14.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  5% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 18deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  6% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 21.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  7% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 25.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  8% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 28.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  9% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 32.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  10% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 36deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  11% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 39.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  12% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 43.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  13% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 46.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  14% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 50.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  15% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 54deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  16% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 57.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  17% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 61.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  18% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 64.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  19% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 68.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  20% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 72deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  21% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 75.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  22% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 79.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  23% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 82.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  24% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 86.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  25% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 90deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  26% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 93.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  27% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 97.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  28% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 100.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  29% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 104.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  30% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 108deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  31% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 111.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  32% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 115.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  33% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 118.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  34% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 122.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  35% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 126deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  36% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 129.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  37% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 133.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  38% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 136.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  39% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 140.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  40% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 144deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  41% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 147.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  42% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 151.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  43% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 154.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  44% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 158.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  45% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 162deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  46% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 165.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  47% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 169.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  48% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 172.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  49% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 176.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  50% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 180deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  51% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 183.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  52% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 187.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  53% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 190.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  54% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 194.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  55% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 198deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  56% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 201.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  57% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 205.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  58% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 208.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  59% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 212.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  60% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 216deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  61% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 219.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  62% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 223.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  63% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 226.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  64% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 230.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  65% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 234deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  66% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 237.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  67% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 241.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  68% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 244.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  69% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 248.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  70% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 252deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  71% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 255.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  72% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 259.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  73% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 262.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  74% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 266.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  75% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 270deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  76% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 273.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  77% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 277.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  78% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 280.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  79% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 284.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  80% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 288deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  81% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 291.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  82% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 295.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  83% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 298.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  84% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 302.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  85% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 306deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  86% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 309.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  87% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 313.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  88% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 316.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  89% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 320.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  90% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 324deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  91% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 327.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  92% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 331.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  93% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 334.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  94% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 338.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  95% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 342deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  96% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 345.6deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  97% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 349.2deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  98% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 352.8deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  99% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 356.4deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+  100% {
+    background: linear-gradient(#fff 0 0) padding-box,
+      conic-gradient(
+          from 360deg,
+          #ff0037,
+          rgba(191, 100, 255, 1),
+          rgba(116, 99, 255, 1),
+          rgba(78, 255, 174, 1),
+          rgba(255, 201, 110, 1),
+          rgba(255, 0, 55, 1)
+        )
+        border-box;
+  }
+}
+
+main {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main div {
+  width: calc(50vw - 10px - 20px);
+}
+main div:last-of-type {
+  margin-left: 20px;
+}
+input[type="file"] {
+  font-family: "Source Code Pro Regular";
+  display: none;
+}
+label,
+button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  margin-top: 10px;
+}
+button {
+  font-family: "Source Code Pro Regular";
+  border: none;
+  font-size: 1em;
+}
+textarea {
+  resize: none;
+  height: 100px;
+  font-family: "Source Code Pro Regular";
+  padding: 10px;
+  display: block;
+  width: 100%;
+  border: 3.5px solid rgb(224, 224, 224);
+  background: linear-gradient(#fff 0 0) padding-box;
+  border-radius: 10px;
+}
+textarea:focus {
+  animation: 7s rotate linear infinite;
+  background: linear-gradient(#fff 0 0) padding-box,
+    conic-gradient(
+        from 90deg at 50% 50%,
+        #ff0037,
+        rgba(191, 100, 255, 1),
+        rgba(116, 99, 255, 1),
+        rgba(78, 255, 174, 1),
+        rgba(255, 201, 110, 1),
+        rgba(255, 0, 55, 1)
+      )
+      border-box;
+  border-color: transparent;
+}
+::selection {
+  background: black;
+  color: #fff;
+}
+button,
+label {
+  border: 3.5px solid rgb(224, 224, 224);
+  background: linear-gradient(rgb(224, 224, 224) 0 0) padding-box;
+}
+button:focus,
+label:focus,
+button:hover,
+label:hover {
+  animation: 7s rotate linear infinite;
+  background: linear-gradient(rgb(224, 224, 224) 0 0) padding-box,
+    conic-gradient(
+        from 90deg at 50% 50%,
+        #ff0037,
+        rgba(191, 100, 255, 1),
+        rgba(116, 99, 255, 1),
+        rgba(78, 255, 174, 1),
+        rgba(255, 201, 110, 1),
+        rgba(255, 0, 55, 1)
+      )
+      border-box;
+  border-color: transparent;
+}
+@media (max-width: 674px) {
+  main {
+    flex-direction: column;
+  }
+  main div {
+    width: 100%;
+  }
+  main div:last-of-type {
+    margin: 0;
+  }
+}
+a{
+    color:blue;
+}

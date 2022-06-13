@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IAEC - Image As Encryption Credentials</title>
+    <link href="./main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo bordered">
+        <div></div>
+      </div>
+    </header>
+    <div style="padding:0 20px"><h1>IAEC - что это?</h1>
+    <p>Это тестируемый и пока еще нестабильный метод получения ключей шифрования из картинок JPEG, PNG, JPG и т.д. Описание метода подробно разобрано на <a href="https://github.com/">GitHub</a>. Протестировать можно ниже.</p>
+        <p>Введите текст для шифровки и загрузите картинку-ключ. То же самое можно сделать для дешифровки. Важно использовать одну и ту же картинку-ключ.</p>
+
+</div><main>
+      <div>
+        <h1>Шифровка</h1>
+        <textarea
+          placeholder="Введите текст для шифровки. Например: смачный бабиджон"
+          id="encryptiontext"
+        ></textarea>
+        <label for="encryptionfile"
+          >Загрузите картинку...<input type="file" id="encryptionfile"
+        /></label>
+        <p id="encryptionfilename"></p>
+        <button id="encryptionsubmit">Зашифровать</button>
+        <p id="encryptedtext"></p>
+      </div>
+      <div>
+        <h1>Дешифровка</h1>
+        <textarea
+          placeholder="Введите зашифрованный текст"
+          id="decryptiontext"
+        ></textarea>
+        <label for="decryptionfile"
+          >Загрузите картинку...<input type="file" id="decryptionfile"
+        /></label>
+        <p id="decryptionfilename"></p>
+
+        <button id="decryptionsubmit">Расшифровать</button>
+        <p id="decryptedtext"></p>
+      </div>
+    </main>
+    <p style="text-align:center;margin-top:10px;"><a style="color:black" href="https://gvlad.ru">gvlad.ru</a></p>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    ></script>
+    <script type="text/javascript" src="./IAEC.js"></script>
+    <script>
+      document.getElementById("encryptionfile").onchange = () => {
+        document.getElementById("encryptionfilename").innerHTML =
+          "Загружена картинка: " +
+          document.getElementById("encryptionfile").files.item(0).name;
+      };
+      function hex2a(hex) {
+        var str = "";
+        for (var i = 0; i < hex.length; i += 2)
+          str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+      }
+      document.getElementById("decryptionfile").onchange = () => {
+        document.getElementById("decryptionfilename").innerHTML =
+          "Загружена картинка: " +
+          document.getElementById("decryptionfile").files.item(0).name;
+      };
+      document.getElementById("encryptionsubmit").onclick = async () => {
+        const inputfile = document.getElementById("encryptionfile");
+        const textToEncrypt = document.getElementById("encryptiontext").value;
+
+        if (textToEncrypt === "") {
+          return alert("Вы не написали текст для шифровки.");
+        }
+        const encryptionHash = await getEncryptionHash(
+          inputfile.files[0],
+          textToEncrypt
+        );
+        const key = encryptionHash.substring(encryptionHash.length / 3);
+        const iv = encryptionHash.substring(0, encryptionHash.length / 3);
+        const keyBytes = CryptoJS.enc.Hex.parse(key);
+        const ivBytes = CryptoJS.enc.Hex.parse(iv);
+        const encryptedText = CryptoJS.AES.encrypt(textToEncrypt, keyBytes, {
+          iv: ivBytes,
+          padding: CryptoJS.pad.ZeroPadding,
+        }).ciphertext.toString(CryptoJS.enc.Base64);
+        document.getElementById("encryptedtext").innerText =
+          "Зашифрованный текст: " + encryptedText;
+      };
+      document.getElementById("decryptionsubmit").onclick = async () => {
+        const inputfile = document.getElementById("decryptionfile");
+        const textToDecrypt = CryptoJS.enc.Base64.parse(
+          document.getElementById("decryptiontext").value
+        );
+
+        if (textToDecrypt === "") {
+          return alert("Вы не написали текст для шифровки.");
+        }
+        const encryptionHash = await getEncryptionHash(
+          inputfile.files[0],
+          textToDecrypt
+        );
+        const key = encryptionHash.substring(encryptionHash.length / 3);
+        const iv = encryptionHash.substring(0, encryptionHash.length / 3);
+
+        const keyBytes = CryptoJS.enc.Hex.parse(key);
+        const ivBytes = CryptoJS.enc.Hex.parse(iv);
+        console.log(textToDecrypt);
+        console.log(ivBytes);
+        console.log(keyBytes);
+        let decryptedData;
+        try{
+ decryptedData = CryptoJS.AES.decrypt(
+          { ciphertext: textToDecrypt },
+          keyBytes,
+          {
+            iv: ivBytes,
+
+            padding: CryptoJS.pad.ZeroPadding,
+          }
+        ).toString(CryptoJS.enc.Utf8);
+        }
+       catch(err){
+           console.log(err)
+           if(err.message.includes("Malformed UTF-8 data")){
+               document.getElementById("decryptedtext").innerText =
+          "Ошибка расшифровки."
+          return;
+           }
+       }
+        document.getElementById("decryptedtext").innerText =
+          "Расшифрованный текст: " + decryptedData;
+      };
+    </script>
+  </body>
+</html>
